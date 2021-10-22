@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/black"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="@android:color/darker_gray"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Mode"
+            android:textAlignment="center" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="72dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_main_gauge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_main_gauge" />
+
+    <ImageView
+        android:id="@+id/iv_upper_gauge"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/upper_gauge"
+        app:layout_constraintBottom_toTopOf="@id/empty_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_upper_needle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/upper_needle"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_upper_gauge"
+        app:layout_constraintEnd_toEndOf="@+id/iv_upper_gauge"
+        app:layout_constraintStart_toStartOf="@+id/iv_upper_gauge"
+        app:layout_constraintTop_toTopOf="@+id/iv_upper_gauge" />
+
+    <ImageView
+        android:id="@+id/iv_lower_gauge"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/lower_gauge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/empty_view" />
+
+    <ImageView
+        android:id="@+id/iv_lower_needle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/lower_needle"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_lower_gauge"
+        app:layout_constraintEnd_toEndOf="@+id/iv_lower_gauge"
+        app:layout_constraintStart_toStartOf="@+id/iv_lower_gauge"
+        app:layout_constraintTop_toTopOf="@+id/iv_lower_gauge" />
+
+    <ImageView
+        android:id="@+id/iv_main_gauge"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="16dp"
+        android:src="@drawable/main_gauge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_main_needle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/main_needle"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_main_gauge"
+        app:layout_constraintEnd_toEndOf="@+id/iv_main_gauge"
+        app:layout_constraintStart_toStartOf="@+id/iv_main_gauge"
+        app:layout_constraintTop_toTopOf="@+id/iv_main_gauge" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
